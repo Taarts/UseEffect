@@ -25,3 +25,13 @@ function theCountChanged() {
 console.log(`the count is now ${count}`)
 }
 to - an inline useEffect function
+
+useEffect be called at least ONCE. Runs when the component mounts.
+viewed in the console -
+
+to not view the first call, but it still runs
+function () {
+if (count !== 0) {
+console.log(`the count is now ${count}`)
+}
+}
