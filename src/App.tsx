@@ -10,14 +10,17 @@ export function App() {
   //          |                array of variables to watch for changes
   //          |                 |
   //          V                 V
-  useEffect(theCountChanged, [count])
+  useEffect(
+    function () {
+      console.log(`Wow, the count changed and is now ${count}`)
+    },
+    [count]
+  )
 
   function handleClickButton() {
     setCount(count + 1)
   }
-  function theCountChanged() {
-    console.log(`the count is now ${count}`)
-  }
+
   return (
     <div>
       <p>
